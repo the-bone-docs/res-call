@@ -1,0 +1,43 @@
+<div class="container">
+	
+	<a href="/">
+		<button type="button" class="btn btn-default" aria-label="Left Align" id="home">
+  			<span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home
+		</button>
+	</a>
+
+	<div class="panel panel-success">
+		<h2 class="panel panel-heading" id="patient-info">Patient Info</h2>
+
+		<form>
+
+			<div class="form-group">
+				<label for="name">Patient Name</label>
+				<input type="text" class="form-control" id="patient-name" placeholder="Name">
+			</div>
+
+			<div class="form-group">
+				<label for="MRN">Patient MRN</label>
+				<input type="text" class="form-control" id="patient-MRN" placeholder="MRN">
+			</div>
+
+			<div class="form-group">
+				<label for="injury">Patient injury</label>
+				<br>
+				
+	            <select class="PAY1">
+	            	{{#each injury}}
+		                <option value="{{this.body_part_specific}}">{{this.body_part_specific}}</option>
+		            {{/each}}
+	            </select>
+			</div>
+
+			<div class="form-group">
+				<label for="HPI">Patient HPI</label>
+				<input type="text-field" class="form-control" id="patient-HPI" placeholder="HPI">
+			</div>
+		</form>
+
+		<button type="submit" class="btn btn-default" id="submit-patient">Submit</button>
+	</div>
+</div>
