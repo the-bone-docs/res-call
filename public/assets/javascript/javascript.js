@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
 	$("#add-patient").on("click", function(event) {
 		$.get("/getAllInjuries", function(data) {
 			console.log("Injuries retrieved successfully!")
@@ -12,7 +11,10 @@ $(document).ready(function() {
 		});
 	});
 
-	$(".patient-button").on("click", function(event) {
+	console.log(document.querySelector('.patient-button'));
+
+	$(document).find(".patient-button").on("click", function(event) {
+		console.log(event);
 		var PID = event.target.id
 		$.get("/viewPatients/"+PID, function(data) {
 			data = data.patientInfo["0"]
