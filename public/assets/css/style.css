@@ -34,7 +34,7 @@ img {
 	padding-top: 10px;
 }
 
-.btn .glyphicon {
+.glyphicon {
   margin-right: 8px;
 }
 
@@ -82,3 +82,14 @@ img {
     padding: 15px;
     border-bottom: 1px solid #e5e5e5;
     background-color: #e5e5e5;
+}
+
+#panel-emergency {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+#panel-ambulance {
+	background-color: #da291c;;
+	color: #FFFFFF;
+}
