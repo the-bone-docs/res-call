@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-md-6"> 
                     {{#each patient}} 
-                        <button type="button" class="btn patient-button btn-default btn-block" id="{{this.id}}">
+                        <button type="button" class="btn patient-button btn-default btn-block" id="patientButton-{{this.id}}">
                             {{this.patient_name}}
                         </button> 
                         <br><br>
@@ -31,10 +31,17 @@
                     
                     <span>Name</span>
                     <input type="text" class="form-control no-border" id="table-name" value=""><br>
+
+                    <span>Injury</span>
+                    <input type="text" class="form-control no-border" id="table-injury" value=""><br>
                     
                     <span>HPI</span>
                     <input type="text" class="form-control no-border" id="table-HPI" value=""><br>
                     
+                    <span>Plan</span>
+                    <span id="table-plan"></span>
+
+                    <span id="add-update-task-span"></span>
                 </div>
             </div> 
         </div> 
