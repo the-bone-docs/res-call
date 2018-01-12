@@ -26,8 +26,13 @@ $(document).ready(function() {
 	});
 
 	$(".patient-button").on("click", function(event) {
-		var PID = event.target.id.split("-")[1];
+		console.log("You clicked on a patient!")
+		console.log(event.target.id)
+		// var PID = event.target.id.split("-")[1];
+		var PID = event.target.id;
+		console.log(PID)
 		$.get("/viewPatients/"+PID, function(data) {
+			console.log(data)
 			data = data.patientInfo["0"];
 			$("#table-name").val(data["patient_name"]);
 			$("#table-MRN").val(data["MRN"]); 
@@ -96,7 +101,7 @@ $(document).ready(function() {
 	    var injury = event.target.value;
 	    console.log(injury)
 	    $.get("/getPlan/"+injury, function(data) {
-			var taskArray = data["plan"]["0"]["plan"].split(",");
+			var taskArray = data["plan"]["0"]["plan"].split(" || ");
 			for (var i = 0; i < taskArray.length; i++) {
 				var checkBox = $("<input>")
 				var checkBoxStatus = "not_checked";
@@ -186,7 +191,7 @@ $(document).ready(function() {
 		  	$.post("/viewPatients/deletePatient", {"id": PID}, function(data) {
 		  		console.log("Patient deleted successfully!")
 		  	});
-		  	$("#patientButton-"+PID).remove()
+		  	$("#"+PID).remove()
 		};		
 	});
 });
