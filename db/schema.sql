@@ -10,7 +10,7 @@ CREATE TABLE scenarios (
   id INTEGER(11) AUTO_INCREMENT NOT NULL,
   body_part VARCHAR(100),
   body_part_specific VARCHAR(200),
-  plan TEXT,
+  treatment VARCHAR(200),
   PRIMARY KEY (id)
 );
 
@@ -18,8 +18,6 @@ CREATE TABLE patients (
   id INTEGER(11) AUTO_INCREMENT NOT NULL,
   patient_name VARCHAR(100),
   MRN VARCHAR(100),
-  HPI TEXT,
-  injury VARCHAR(200),
-  plan TEXT,
+  HPI VARCHAR(200),
   PRIMARY KEY (id)
 );

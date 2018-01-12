@@ -20,7 +20,7 @@
 				<label for="injury">Patient injury</label>
 				<br>
 				
-	            <select id="injury-type">
+	            <select class="PAY1">
 	            	{{#each injury}}
 		                <option value="{{this.body_part_specific}}">{{this.body_part_specific}}</option>
 		            {{/each}}
@@ -30,12 +30,6 @@
 			<div class="form-group">
 				<label for="HPI">Patient HPI</label>
 				<input type="text-field" class="form-control" id="patient-HPI" placeholder="HPI">
-			</div>
-			
-			<div class="form-group">
-				<label for="plan">Plan</label>
-				<span id="patient-plan"></span>
-				<br>Add task: <br><input type="text-field" class="form-control" id="add-initial-task" value="">
 			</div>
 		</form>
 		<button type="submit" class="btn btn-default" id="submit-patient">Submit</button>
