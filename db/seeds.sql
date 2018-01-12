@@ -17,7 +17,7 @@ INSERT INTO patients (
   plan
   )
   VALUES
-    ("Chang", "0207890", "Proximal femur fracture", "31YO M w/ too much work."),
-    ("Heejin", "3987105", "Proximal femur fracture", "29YO F w/ lots of love."),
-    ("Mom", "0298720", "Distal femur fracture", "55YO F who is great."),
-    ("Pop", "1598023", "Distal femur fracture", "61YO M who is also great.")
+    ("Chang", "0207890", "Proximal femur fracture", "31YO M w/ too much work.", ""),
+    ("Heejin", "3987105", "Proximal femur fracture", "29YO F w/ lots of love.", ""),
+    ("Mom", "0298720", "Distal femur fracture", "55YO F who is great.", ""),
+    ("Pop", "1598023", "Distal femur fracture", "61YO M who is also great." ,"")
